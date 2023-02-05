@@ -91,12 +91,13 @@ void resta(){
 
 /*en la siguiente funcion sacamos el iva dado por el usuario a un precion dado por el usuario*/
 void iva(){
-    float ivat,num1;
+    float ivat,num1,num2;
         cout<<"\n\tsacar iva";
         cout<<"\ncual es su cantidad de impuestos: ";
         cin>>ivat;
         cout<<"\ncual es el valor de su producto: ";
         cin>>num1; 
         resultado=(ivat*num1)/100;
+        resultado=resultado+num1;
         cout<<"\nla suma de su iva es: "<<resultado<<endl;
             }
