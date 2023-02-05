@@ -12,7 +12,7 @@ void menu();//menu (:
 //ejercisios
 void suma();
 void resta();
-
+void iva();
 // variables globales 
 int resultado=0;
 bool bandera=false;//variable para salir del menu.
@@ -46,6 +46,9 @@ void menu(){
                     break;
                 case 2:
                     resta();
+                    break;
+                case 3:
+                    iva();
                     break;
                 }
                 
@@ -83,6 +86,17 @@ void resta(){
 	cin>>num2;
     resultado=num1-num2;
 	cout<<"\nla resta es: "<<resultado<<endl;
-
-
 }
+
+
+/*en la siguiente funcion sacamos el iva dado por el usuario a un precion dado por el usuario*/
+void iva(){
+    float ivat,num1;
+        cout<<"\n\tsacar iva";
+        cout<<"\ncual es su cantidad de impuestos: ";
+        cin>>ivat;
+        cout<<"\ncual es el valor de su producto: ";
+        cin>>num1; 
+        resultado=(ivat*num1)/100;
+        cout<<"\nla suma de su iva es: "<<resultado<<endl;
+            }
