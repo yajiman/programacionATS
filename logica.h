@@ -97,7 +97,7 @@ void iva(){
         cin>>ivat;
         cout<<"\ncual es el valor de su producto: ";
         cin>>num1; 
-        resultado=(ivat*num1)/100;
+        resultado=(ivat*num1)/100; //formula para sacar el porcentaje
         resultado=resultado+num1;
         cout<<"\nla suma de su iva es: "<<resultado<<endl;
             }
