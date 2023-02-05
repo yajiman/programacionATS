@@ -1,8 +1,8 @@
-#include "logica.h"
+#include "logica.h" //agrigo la coneccion a las funciones
 
 int main(){
-    menu();
-   cout<<"gracias por su tiempo";
+    menu();//conecto 
+   cout<<"gracias por su tiempo";//agradesco el tiempo de las personas
     getchar();
 return 0;
 }

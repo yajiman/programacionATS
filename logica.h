@@ -25,8 +25,8 @@ void menu(){
     do
     {
         cout<<"\t\nselecione un ejercicio\n";
-        cout<<"\nopcion #1";
-        cout<<"\nopcion #2";
+        cout<<"\nopcion #1";// si precionamos 1 iniciamos la funcion suma 
+        cout<<"\nopcion #2";// si pricinamos 2 iniciamos la funcion resta
         cout<<"\nopcion #3";
         cout<<"\nopcion #4";
         cout<<"\nopcion #5";
