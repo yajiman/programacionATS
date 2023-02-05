@@ -36,7 +36,7 @@ void menu(){
         cout<<"\ndigite un numero: ";
         cin>>opc;
         if(opc==0){
-            bandera=true;
+            bandera=true; // la variable de salida cambia a true 
             }
         else{
             switch (opc)
