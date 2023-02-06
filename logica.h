@@ -38,12 +38,7 @@ void menu(){
         cin>>opc;
         }while (opc>7|opc<0);
         
-            
-        
-        
-
-
-        if(opc==0){
+         if(opc==0){
             bandera=true; // la variable de salida cambia a true 
             }
         else{
@@ -76,7 +71,7 @@ int num1, num2;
 	cin>>num1;
     cout<<"\ndigite otro numero: ";
 	cin>>num2;
-    resultado=num1+num2;
+    resultado=num1+num2; //formula para sumar dos variables.
 	cout<<"\nla suma es: "<<resultado<<endl;
  
 }
@@ -92,7 +87,7 @@ void resta(){
 	cin>>num1;
     cout<<"\ndigite otro numero: ";
 	cin>>num2;
-    resultado=num1-num2;
+    resultado=num1-num2;// formula para restar dos variables
 	cout<<"\nla resta es: "<<resultado<<endl;
 }
 
