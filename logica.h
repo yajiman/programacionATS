@@ -22,8 +22,9 @@ int opc;
 
 void menu(){
 
-    do
-    {
+    do{
+
+        do{
         cout<<"\t\nselecione un ejercicio\n";
         cout<<"\nopcion #1";// si precionamos 1 iniciamos la funcion suma 
         cout<<"\nopcion #2";// si pricinamos 2 iniciamos la funcion resta
@@ -35,6 +36,13 @@ void menu(){
         cout<<"\nsalir #0";//si colocamos el 0 el programa se finalizara cambiando bandera de false a true
         cout<<"\ndigite un numero: ";
         cin>>opc;
+        }while (opc>7|opc<0);
+        
+            
+        
+        
+
+
         if(opc==0){
             bandera=true; // la variable de salida cambia a true 
             }
