@@ -42,7 +42,7 @@ void menu(){
             bandera=true; // la variable de salida cambia a true 
             }
         else{
-            switch (opc)
+            switch (opc)// sistema de selecion de funciones
                 {
                 case 1:
                     suma();
