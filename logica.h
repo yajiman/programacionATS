@@ -58,7 +58,7 @@ void menu(){
         
             }
         resultado=0;
-    } while (bandera==false);
+    } while (bandera==false);// hasta que no cambie a true no se saldra del bucle del menu
 }
 
 /*en la siguiente funcion declaro dos variables locales, posteriormente pido
