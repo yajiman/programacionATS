@@ -5,4 +5,4 @@ int main(){
    cout<<"gracias por su tiempo";//agradesco el tiempo de las personas
     getchar(); //no reconoce la pausa 
 return 0;
-}
+} // este es el fin de un programa que esta escrito en C++ de una forma completaS
