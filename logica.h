@@ -103,4 +103,5 @@ void iva(){
         resultado=(ivat*num1)/100; //formula para sacar el porcentaje
         resultado=resultado+num1;
         cout<<"\nla suma de su iva es: "<<resultado<<endl;
-            }
+            }//fin de la funcion para sacar el iva
+            
