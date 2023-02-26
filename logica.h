@@ -6,17 +6,22 @@
 
 using namespace std;
 
-
 void menu();//menu (:
+
 
 //ejercisios
 void suma();
 void resta();
 void iva();
+void interc();
+void nfinal();
+
+
 // variables globales 
 int resultado=0;
+int almac=0;// variable de almacenamiento
 bool bandera=false;//variable para salir del menu.
-int opc;
+int opc;// variable para la seleccion de un ejercicio
 
 
 
@@ -47,15 +52,23 @@ void menu(){
                 case 1:
                     suma();
                     break;
+                
                 case 2:
                     resta();
                     break;
+                
                 case 3:
                     iva();
                     break;
+                
+                case 4:
+                    interc();
+                    break; 
+                case 5:
+                    nfinal();
+                    break;              
                 }
                 
-        
             }
         resultado=0;
     } while (bandera==false);// hasta que no cambie a true no se saldra del bucle del menu
@@ -76,7 +89,6 @@ int num1, num2;
  
 }
 
-
 /*en la siguiente funcion declaro dos variables locales, posteriormente pido
 que se introduscan dos numero enteros para su posterio resta espresada mediante
 la variable gobal resultado */
@@ -91,7 +103,6 @@ void resta(){
 	cout<<"\nla resta es: "<<resultado<<endl;
 }
 
-
 /*en la siguiente funcion sacamos el iva dado por el usuario a un precion dado por el usuario*/
 void iva(){
     float ivat,num1,num2;
@@ -104,4 +115,19 @@ void iva(){
         resultado=resultado+num1;
         cout<<"\nla suma de su iva es: "<<resultado<<endl;
             }//fin de la funcion para sacar el iva
-            
+
+void interc(){
+    int num1,num2;
+
+        cout<<"\nintrodusca su primer numero: ";
+        cin>>num1;
+        cout<<"\ndigite el sugundo numreo: ";
+        cin>>num2;
+
+        almac=num1;
+        num1=num2;
+        num2=almac;
+        cout<<"\nsus numero han sido intercambiados";
+        cout<<"\nsu primer numero es: "<<num1<<endl;
+        cout<<"\nsu segundo numero es: "<<num2<<endl;
+}
