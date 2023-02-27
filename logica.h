@@ -15,7 +15,7 @@ void resta();
 void iva();
 void interc();
 void nfinal();
-
+void mponderada(); //media ponderada de 3 notas donde una vale el 30% otra el 60% y una 10%
 
 // variables globales 
 int resultado=0;
@@ -52,21 +52,21 @@ void menu(){
                 case 1:
                     suma();
                     break;
-                
                 case 2:
                     resta();
                     break;
-                
                 case 3:
                     iva();
                     break;
-                
                 case 4:
                     interc();
                     break; 
                 case 5:
                     nfinal();
-                    break;              
+                    break;
+                case 6:
+                    mponderada();// media ponderada
+                    break;
                 }
                 
             }
@@ -116,6 +116,9 @@ void iva(){
         cout<<"\nla suma de su iva es: "<<resultado<<endl;
             }//fin de la funcion para sacar el iva
 
+/*esta es una funcion de intercambio de tal modo que dos variables puedan intercambiar sus valores
+la verdad aun no tengo un uso en mente para esto pero de igual forma tiene mucho potencial*/
+
 void interc(){
     int num1,num2;
 
@@ -130,4 +133,44 @@ void interc(){
         cout<<"\nsus numero han sido intercambiados";
         cout<<"\nsu primer numero es: "<<num1<<endl;
         cout<<"\nsu segundo numero es: "<<num2<<endl;
+}
+
+
+
+//en la siguiente funcion sacaremos el promedio de 4 notas finales
+void nfinal(){
+float n1,n2,n3,n4,promedio=0;
+
+        cout<<"\nIntrodusca las notas del estudiante"<<endl;
+        cout<<"\nNota #1: ";
+        cin>>n1;
+        cout<<"\nNota #2: ";
+        cin>>n2;
+        cout<<"\nNota #3: ";
+        cin>>n3;
+        cout<<"\nNota #4: ";
+        cin>>n4;
+    promedio=(n1+n2+n3+n4)/4;
+        cout<<"\nSu promedio es: "<<promedio<<endl;
+}
+
+/*en esta funcion sacaremos la media ponderada de 3 notas donde la primera 
+tiene 30% de la nota total la segunga el 60 y la ultima el 10% una vez tenemos 
+loas notas aplicaremos una formula para sacar la media*/
+void mponderada(){
+    float n1,n2,n3,media=0;
+    float f1=0,f2=0,f3=0;
+
+    cout<<"\nDigite la nota de cada actividad"<<endl;
+    cout<<"\nNota practica :";
+    cin>>n1;
+    cout<<"\nNota teorica: ";
+    cin>>n2;
+    cout<<"\nNota participacion: ";
+    cin>>n3;
+    f1= (n1*30)/100;
+    f2= (n2*60)/100;
+    f3= (n3*10)/100;
+    media=f1+f2+f3;
+    cout<<"\nSu nota total es: "<<media<<endl;
 }
