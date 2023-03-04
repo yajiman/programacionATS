@@ -7,7 +7,7 @@
 using namespace std;
 
 void menu();//menu (:
-
+void menu2();//menu con mas opciones de ejercicios
 
 //ejercisios
 void suma();
@@ -16,7 +16,9 @@ void iva();
 void interc();
 void nfinal();
 void mponderada(); //media ponderada de 3 notas donde una vale el 30% otra el 60% y una 10%
-
+void formula(); //formula par probar la libreria cmath
+void mayor2n();// cual es el mayor de dos numeros.
+void mayor3n();
 // variables globales 
 int resultado=0;
 int almac=0;// variable de almacenamiento
@@ -38,10 +40,12 @@ void menu(){
         cout<<"\nopcion #5";
         cout<<"\nopcion #6";
         cout<<"\nopcion #7";
+        cout<<"\nopcion #8";
+        cout<<"\nmas #9";
         cout<<"\nsalir #0";//si colocamos el 0 el programa se finalizara cambiando bandera de false a true
         cout<<"\ndigite un numero: ";
         cin>>opc;
-        }while (opc>7|opc<0);
+        }while (opc>9|opc<0);
         
          if(opc==0){
             bandera=true; // la variable de salida cambia a true 
@@ -66,6 +70,18 @@ void menu(){
                     break;
                 case 6:
                     mponderada();// media ponderada
+                    break;
+                case 7:
+                    formula();// formula para provar el uso de cmath.
+                    break;
+                case 8:
+                    mayor2n();
+                    break;
+                case 9:
+                    menu2();
+                    break;
+                default: 
+                    cout<<"\nesta opcion no esta creada"<<endl; 
                     break;
                 }
                 
@@ -173,4 +189,81 @@ void mponderada(){
     f3= (n3*10)/100;
     media=f1+f2+f3;
     cout<<"\nSu nota total es: "<<media<<endl;
+}
+
+/*formula para probar la libreria cmath sus funcions son sqrt para sacar la raiz cuadrada
+*/
+void formula(){
+    float x,y,resultado=0;
+    
+    cout<<"\ndigite el valor de x: ";
+    cin>>x;
+    cout<<"\ndigite el valor de y: ";
+    cin>>x;
+
+    resultado= (sqrt(x))/(pow(y,2)-1);
+
+    cout<<"\nsu resultado es: "<<resultado<<endl;
+}
+
+/*en la siguiente funcion crearemos un sistema al que le daremos dos numeros
+y esta nos devolvera el mayor de estos dos*/
+
+void mayor2n(){
+    int n1,n2;
+
+    cout<<"\ndigite un numero: ";
+    cin>>n1;
+    cout<<"\ndigite otro numero: ";
+    cin>>n2;
+
+    if(n1>n2){
+        cout<<"\nel mayor es: "<<n1<<endl;
+
+    }else{
+        cout<<"\nel mayor es:"<<n2<<endl;
+
+    }
+
+}
+
+void menu2(){
+
+    do{
+        do{
+
+            cout<<"\nMenu 2"<<endl;
+            cout<<"\nopcion #1";
+            cout<<"\nopcion #2";
+            cout<<"\nopcion #3";
+            cout<<"\nopcion #4";
+            cout<<"\nopcion #5";
+            cout<<"\nopcion #6";
+            cout<<"\nopcion #7";
+            cout<<"\nopcion #8";
+            cout<<"\nMas #9";
+            cout<<"\nsalir #0"<<endl;
+            
+            cin>>opc;
+
+        }while (opc<0|opc>9);
+    if(opc==0){
+        bandera=true;
+
+    }else{
+        switch (opc)
+        {
+        case 1:
+            mayor3n();
+            break;
+        
+        default:
+            break;
+        }
+
+    }
+
+}while(bandera==true);
+
+bandera=false;
 }
