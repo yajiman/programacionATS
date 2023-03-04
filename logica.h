@@ -18,7 +18,13 @@ void nfinal();
 void mponderada(); //media ponderada de 3 notas donde una vale el 30% otra el 60% y una 10%
 void formula(); //formula par probar la libreria cmath
 void mayor2n();// cual es el mayor de dos numeros.
-void mayor3n();
+
+
+//ejercicios para el menu 2
+void mayor3n();// cual es el mayor de 3 numeros
+void paoimpa();//si un numero es par o inpar 
+
+
 // variables globales 
 int resultado=0;
 int almac=0;// variable de almacenamiento
@@ -227,6 +233,10 @@ void mayor2n(){
 
 }
 
+/*la siguiente funcion reprecenta un segundo menu con el fin de no saturar el primer munu,
+el limite de cada menu seran 8 ejercicios de tal manera que pueda practicar el do while y el if
+else*/
+
 void menu2(){
 
     do{
@@ -256,7 +266,9 @@ void menu2(){
         case 1:
             mayor3n();
             break;
-        
+        case 2:
+            paoimpa();
+            break;        
         default:
             break;
         }
@@ -272,38 +284,54 @@ bandera=false;
 
 void mayor3n (){
     int n1,n2,n3;
-                 cout<<"Digite tres numeros"<<endl;
-                 cout<<"\ndigite su primer numero"<<endl;
-                 cin>>n1;
-                 cout<<"\ndigite su segundo numero"<<endl;
-                 cin>>n2;
-                 cout<<"\ndigite su tercer numero"<<endl;
-                 cin>>n3;
-
-
-
+            cout<<"Digite tres numeros"<<endl;
+            cout<<"\ndigite su primer numero"<<endl;
+            cin>>n1;
+            cout<<"\ndigite su segundo numero"<<endl;
+            cin>>n2;
+            cout<<"\ndigite su tercer numero"<<endl;
+            cin>>n3;
 
     if(n1!=n2||n2!=n3){
-    if(n1>n2){
-        if(n1>n3){
-            cout<<"el mayor es: "<<n1<<endl;
-        }else{
-             cout<<"el mayor es: "<<n3<<endl;
-        }
+        if(n1>n2){
+            if(n1>n3){
+                cout<<"el mayor es: "<<n1<<endl;
+            }else{
+                 cout<<"el mayor es: "<<n3<<endl;
+                }
 
-    }else{
-        if(n2>n3){
-             cout<<"el mayor es: "<<n2<<endl;
         }else{
-             cout<<"el mayor es: "<<n3<<endl;
-        }
+            if(n2>n3){
+                cout<<"el mayor es: "<<n2<<endl;
+            }else{
+                cout<<"el mayor es: "<<n3<<endl;
+            }
 
     }
     }else{
 
         cout<<"\nLos numeros son iguales"<<endl;
+        }
+}
 
+/*como saber si un numero es para o in par, en la siguinte funcion dividiremos un numero
+hasta saber si es par o impar*/
+
+void paoimpa(){
+    int n1;
+
+    cout<<"\ndigite un numero: ";
+    cin>>n1;
+
+    do
+    {
+        almac=n1/2;
+    } while ((n1==0)||(n1==1));
+    
+    if (n1==0)
+    {
+        cout<<"\nsu numero es par"<<endl;
+    }else{
+        cout<<"\nsu numero es in par"<<endl;
     }
-
-
 }
