@@ -45,7 +45,7 @@ void menu(){
         cout<<"\nsalir #0";//si colocamos el 0 el programa se finalizara cambiando bandera de false a true
         cout<<"\ndigite un numero: ";
         cin>>opc;
-        }while (opc>9|opc<0);
+        }while (opc>10|opc<0);
         
          if(opc==0){
             bandera=true; // la variable de salida cambia a true 
@@ -246,7 +246,7 @@ void menu2(){
             
             cin>>opc;
 
-        }while (opc<0|opc>9);
+        }while (opc<0|opc>10);
     if(opc==0){
         bandera=true;
 
@@ -266,4 +266,44 @@ void menu2(){
 }while(bandera==true);
 
 bandera=false;
+}
+
+/*en la siguiente funciuon tratamos de conseguir saber cual es el mayor de 3 numeros*/
+
+void mayor3n (){
+    int n1,n2,n3;
+                 cout<<"Digite tres numeros"<<endl;
+                 cout<<"\ndigite su primer numero"<<endl;
+                 cin>>n1;
+                 cout<<"\ndigite su segundo numero"<<endl;
+                 cin>>n2;
+                 cout<<"\ndigite su tercer numero"<<endl;
+                 cin>>n3;
+
+
+
+
+    if(n1!=n2||n2!=n3){
+    if(n1>n2){
+        if(n1>n3){
+            cout<<"el mayor es: "<<n1<<endl;
+        }else{
+             cout<<"el mayor es: "<<n3<<endl;
+        }
+
+    }else{
+        if(n2>n3){
+             cout<<"el mayor es: "<<n2<<endl;
+        }else{
+             cout<<"el mayor es: "<<n3<<endl;
+        }
+
+    }
+    }else{
+
+        cout<<"\nLos numeros son iguales"<<endl;
+
+    }
+
+
 }
