@@ -23,7 +23,7 @@ void mayor2n();// cual es el mayor de dos numeros.
 //ejercicios para el menu 2
 void mayor3n();// cual es el mayor de 3 numeros
 void paoimpa();//si un numero es par o inpar 
-
+//este es un test de git.
 
 // variables globales 
 int resultado=0;
