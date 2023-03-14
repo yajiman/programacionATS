@@ -6,4 +6,4 @@ int main(){
     getchar(); //no reconoce la pausa 
 return 0;
 } /*este es el fin de un programa que esta escrito en C++ de una forma completaS
- este es el final de mi documento Cpp*/
+ este es el final de mi documento Cpp este es un test para git*/
