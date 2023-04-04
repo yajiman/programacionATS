@@ -25,6 +25,20 @@ void mayor3n();// cual es el mayor de 3 numeros
 void paoimpa();//si un numero es par o inpar 
 //este es un test de git.
 
+//ejercicios para el menu 3
+void menu3();
+
+//ejercicios ciclos o bucles.
+
+void sucuadrados();//suma los primeros 10 cuadrados.
+void prometempera(); //promedio de tres temperaturas.
+void rango();// detenemos el programa si los nuemros estan en le rango.
+void elevador();// elevar un numero.
+void factorial();// sacar el factorial.
+void factorial2();// sacar el factorial del factorial.
+void factorilaELE();// Escriba un programa que calcule el valor de: 2^1+2^2+2^3+...+2^n
+
+
 // variables globales 
 int resultado=0;
 int almac=0;// variable de almacenamiento
@@ -268,7 +282,10 @@ void menu2(){
             break;
         case 2:
             paoimpa();
-            break;        
+            break;
+	case 9:
+	     menu3();
+		break;
         default:
             break;
         }
@@ -334,4 +351,165 @@ void paoimpa(){
     }else{
         cout<<"\nsu numero es in par"<<endl;
     }
+}
+
+void menu3(){
+	
+	do{
+		do{
+			cout<<"------menu  #3------"<<endl;
+			cout<<"  ejercicio #1 "<<endl;
+			cout<<"  ejercicio #2 "<<endl;
+			cout<<"  ejercicio #3 "<<endl;
+			cout<<"  ejercicio #4 "<<endl;
+			cout<<"  ejercicio #5 "<<endl;
+			cout<<"  ejercicio #6 "<<endl;
+			cout<<"  ejercicio #7 "<<endl;
+			cout<<"precione 0 para salir del programa"<<endl;
+			cin>>opc;
+		}while((opc<=0)&&(opc>=9));
+		
+		if(opc==0){
+			bandera=true;
+		}else{
+			switch(opc){
+				case 1:
+					sucuadrados();
+					break;
+				case 2:
+					prometempera();
+					break;
+				case 3:
+					rango();
+					break;
+				case 4:
+					elevador();
+					break;
+				case 5:
+					factorial();
+					break;
+				case 6:
+					factorial2();
+					break;
+				case 7:
+					factorilaELE();
+					break;
+				default:
+					cout<<"\nusted ha ingresado una opcion incorrecta"<<endl;
+					cout<<"\nprecione enter";
+					cin.get();
+					break;
+			}
+		}
+			
+	}while(bandera==false);
+	
+}
+
+
+/*en el siguinte ejercicion sacaremos la suma de los primeros 10 
+cuadrados utilizando bucles*/
+
+
+void sucuadrados(){
+	int n1,resultado=0;
+	
+	for(int i=1;i<=10;i++){
+		n1=i*i;
+		cout<<n1<<endl;
+		resultado+=n1;
+	}
+	cout<<"\nla suma de los 10 primeros cuadrados es: "<<resultado<<endl;
+	cin.get();
+}
+
+/*el siguiente programa sacara el promedio de 4 
+temperaturas sacadas cada 4 horas*/
+
+void prometempera(){
+	float n1,resultado=0;
+	for(int i=0;i<3;i++){
+		cout<<"cual es su temperatura #"<<i<<": ";
+		cin>>n1;
+	}
+	resultado=n1/3;
+	cout<<"\nsu temperatura promedio es: "<<resultado<<endl;
+}
+
+/*en la siguinte funcion sumamos todos los numeros dados hasta que se coloque
+un numero entre 20-30 o que se brinde el 0*/
+
+void rango(){
+	int n1=0,n2=0;
+	
+	do{
+		cout<<"\ndigite un numero: ";
+		cin>>n1;
+		n2+=n1;
+	}while((n1<20 || n1>30)&&(n1!=0));
+	
+	cout<<"\nla suma de todos los numeros digitados es: "<<n2<<endl;
+	
+}
+
+/*escribire un programa que calcule x^y, 
+donde tanto x como y son enteros positivos, 
+sin utilizar la función pow.*/
+
+void elevador(){
+	int n1,n2,resultado=1;
+	
+	cout<<"\ndigite un numero: ";
+	cin>>n1;
+	cout<<"\nEleva ese numero: ";
+	cin>>n2;
+	for(int i=1; i<n2;i++){
+		resultado*=n1;
+		cout<<"\n"<<resultado;
+	}
+	
+	cout<<"\nSu resultado es: "<<resultado<<endl;
+}
+
+
+void factorial(){
+	int n,resultado=1;
+	cout<<"\nDigite su numero para sacar su factorial: ";
+	cin>>n;
+	
+	for(int i=1;i<=n;i++){
+		resultado*=i;
+	}
+	
+	cout<<"\nSu resultado es: "<<resultado<<endl;
+}
+
+void factorial2(){
+	int n,resultado=1;
+	cout<<"\nDigite su numero para sacar su factorial!: ";
+	cin>>n;
+	
+	for(int i=1;i<=n;i++){
+		resultado*=i;
+			for(int e=1;e<=i;e++){
+				resultado*=e;
+			}
+	}
+
+	cout<<"\nSu resultado es: "<<resultado<<endl;
+}
+
+
+void factorilaELE(){
+	int n,suma=0,resultado=0;
+	
+	cout<<"\nDigite su factrial para elevarlo: ";
+	cin>>n;
+	
+	for(int i=1;i<=n;i++){
+		resultado= pow(2,i);
+		suma+=resultado;
+	}
+	
+	cout<<"\nsu resultado es: "<<resultado<<endl;
 }
